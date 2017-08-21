@@ -1,16 +1,3 @@
-<?php
-mysql_connect('localhost','root','');
-$con=mysql_select_db('IWPProject');
-if($con)
-{
-
-}
-else
-{
-	die('Unable to connect');
-}
-?>
-
 <!DOCTYPE html>
 <html>
 <style>
@@ -86,14 +73,4 @@ else
 	echo ('*Required fields.');
 }
 
-$query="INSERT INTO table1 VALUES('','{$name}')";
-$queryresult=mysql_query($query);
-if($queryresult){
-	header('Location: index.php');
-}
-echo $queryresult;
-$query="INSERT INTO table2 VALUES('','{$username}','{$password}')";
-$queryresult=mysql_query($query);
-echo $queryresult;
-}
 ?>
