@@ -1,4 +1,47 @@
 <?php
+mysql_connect('localhost','root','');
+$con=mysql_select_db('IWPProject');
+if($con)
+{
+}
+else
+{
+    die('Unable to connect');
+}
+
+if(isset($_POST['username'])&&isset($_POST['password']))
+    {
+
+        $username=htmlentities($_POST['username']);
+        $password=htmlentities($_POST['password']);
+        $password=md5($password);
+        
+        $query="SELECT Password FROM table2 WHERE UserName='{$username}'";
+        $queryresult=mysql_query($query);
+        $queryresult2=mysql_fetch_assoc($queryresult);
+        if($queryresult2['Password']===$password)
+        {
+            session_start();
+            $_SESSION['name']=$username; 
+            header('Location: after_login.php');        
+        }
+        else
+        {
+            echo "<br>";
+            echo 'Wrong Password';
+        }
+    
+
+    
+        if(isset($_POST['logout']))
+        { 
+            echo $_SESSION['name'];
+            session_destroy();
+            echo 'You are logged out.';
+        }
+    }
+?>
+<?php
 if(isset($_POST['buttonone']))
 {
 	header('Location: signup.php');
