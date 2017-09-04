@@ -1,5 +1,6 @@
 <?php
 mysql_connect('localhost','root','');
+$con=mysql_select_db('IWPProject');
 if($con)
 {
 }
@@ -47,6 +48,52 @@ if(isset($_POST['buttonone']))
 ?>
 <!DOCTYPE html>
 <html>
+<style>
+
+.body{
+	background-color: #ccccb3;
+}
+.green{
+	margin-left:6px; 
+}
+.button{
+	border-radius: 2px;
+	 border: 2px solid grey;
+	 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+}
+
+.button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.box{	padding-right: 20px;
+
+}
+
+.fontstyle{
+	font-style: Monospace;
+	font-size: 35px;
+}
+.upload{
+    border-radius: 5    px;
+     border: 2px solid grey;
+     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.upload:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+</style>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">

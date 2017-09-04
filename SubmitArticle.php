@@ -1,5 +1,41 @@
+<?php
+mysql_connect('localhost','root','');
+$con=mysql_select_db('IWPProject');
+if($con)
+{
+   
+}
+else
+{
+    die('Unable to connect');
+}
+?>
 <!DOCTYPE html>
 <html>
+<style>
+.greentext{
+	background-color: #ccccb3;
+}
+.button{
+	border-radius: 5	px;
+	 border: 2px solid grey;
+	 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.text{
+	font-size:20px;
+	 }
+</style>
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
